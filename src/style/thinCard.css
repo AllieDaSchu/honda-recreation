@@ -1,0 +1,122 @@
+.thin-card .card-wrapper {
+    position: relative;
+    height: inherit;
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.thin-card-img,
+.thin-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-wrapper .thin-card-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.card-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+.card-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-wrapper .card-head, .card-wrapper .card-foot {
+    padding-bottom: 0;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.card-wrapper .card-foot {
+    display: flex;
+    align-items: flex-end;
+    min-height: 53px;
+    padding-top: 0;
+}
+
+.card-wrapper .subheadline {
+    font-size: 0.875rem;
+}
+
+.card-wrapper .headline {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.card-wrapper .headline, .card-wrapper .subheadline {
+    color: #fff;
+    font-family: "AvenirNextRegular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.35;
+    position: relative;
+    z-index: 2;
+}
+
+.card-cta a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "AvenirNextRegular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 0.75rem;
+}
+
+.card-cta {
+    z-index: 2;
+}
+
+.thin-card {
+    box-sizing: content-box;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+    scroll-snap-align: start;
+}
+
+.gradient.top {
+    background: linear-gradient(180deg, #000 5%, #0000);
+    min-height: 65px;
+    top: 0;
+    z-index: 1;
+}
+
+.gradient.bottom {
+    background: linear-gradient(0deg, #000 5%, #0000);
+    bottom: 0;
+    z-index: 1;
+}
+
+.gradient {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}

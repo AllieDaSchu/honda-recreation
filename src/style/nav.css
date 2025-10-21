@@ -1,3 +1,5 @@
+/* Nav Bar Container */
+
 .nav-bar-container {
     position: fixed;
     top: 0;
@@ -8,34 +10,37 @@
     z-index: 1000;
     transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
     background-color: transparent;
+    height: 76px;
+    
 }
 
-.nav-bar-container.scrolled {
+.nav-bar-container.scrolled, .nav-bar-container.dropdown-open {
     background-color: white;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     color: black;
-}
-
-.logo {
-    max-height: 40px;
-}
-
-.location-icon {
-    font-size: 16px;
+    border-bottom: 1px solid #c4c4c4;
 }
 
 .nav-bar {
     display: flex;
-    height: 100%;
     justify-content: space-between;
     padding: 0 32px;
+    max-width: 1920px;
 }
+
+/* Logo */
 
 .header-icon {
     display: inline-flex;
     position: relative;
     z-index: 2;
 }
+
+.logo {
+    max-height: 40px;
+}
+
+/* Main Navigation Bar */
 
 .sub-menu {
     display: inline-flex;
@@ -47,26 +52,21 @@
     transition: transform 0.5s, -webkit-transform .5s;
     display: flex;
     list-style: none;
+    align-items: center;
 }
 
-ul .sub-menu .secondary-list li {
+.secondary-nav .secondary-list li {
     list-style: none;
-    margin: 0 16px 0 15px;
-    
-}
-
-ul {
-    list-style: none;
+    margin: 0;
+    border-bottom: none;
+    display: inline-flex;
+    box-sizing: border-box;
 }
 
 .secondary-nav .secondary-list li button {
-    background-image: none;
     height: 100%;
     padding: 14px 15px;
     font-weight: 700;
-}
-
-button {
     background: none;
     border: 0;
     color: inherit;
@@ -74,14 +74,20 @@ button {
     margin: 0;
     opacity: inherit;
     outline: 0 none;
-    padding: 0;
     text-shadow: none;
     font-size: .9rem;
+    display: inline-flex;
 }
+
+/* Hamburger Information */
 
 .hamburger {
     display: none;
     cursor: pointer;
+}
+
+.location-icon {
+    font-size: 16px;
 }
 
 .hamburger button {
@@ -91,29 +97,103 @@ button {
     font-size: 1.5rem;
 }
 
-@media (max-width: 1122px) {
+@media (max-width: 1024px) {
     .hamburger {
         display: flex;
         gap: 10px;
     }
 
     .secondary-nav {
-        display: none;
-        position: absolute;
-        top: 60px;
+        position: fixed;
+        top: 76px;
+        left: 0;
+        bottom: 0;
         right: 0;
-        width: 100%;
-        background-color: rgba(0,0,0,0.95);
-        flex-direction: column;
-        padding: 20px;
+        background-color: #eee;
+        overflow-y: auto;
+        display: none;
+        z-index: 999;
     }
 
     .secondary-nav.active {
-        display: flex;
+        display: block;
     }
 
     .secondary-nav .secondary-list {
+        display: flex;
         flex-direction: column;
-        gap: 15px;
+        padding: 0 24px 0 24px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .secondary-nav.active {
+        display: block;
+        top: 76px;
+        box-sizing: border-box;
+    }
+
+    .secondary-nav .secondary-list .nav-item {
+        border-bottom: 1px solid #c4c4c4;
+        list-style: none;
+        pointer-events: auto;
+        box-sizing: border-box;
+        font-size: 3.75rem;
+        letter-spacing: .00625rem;
+        line-height: 4rem;
+        width: 100%;
+    }
+
+    .secondary-nav .secondary-list .nav-item button {
+        background-image: none;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding: 14px 0;
+        width: 100%;
+    }
+    .secondary-nav.active {
+        display: block;
+        transform: translateY(0);
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .location-bar, .search-bar {
+        display: none !important;
+    }
+
+    .secondary-list.active {
+        transform: none;
+        height: 100%;
+        margin: 0;
+        width: 100%;
+        padding: 0;
+        list-style: none;
+        max-width: 1920px;
+        box-sizing: border-box;
+    }
+    
+    .nav-bar-container.dropdown-open::after {
+        content: "";
+                border-bottom: 1px solid #c4c4c4 !important;
+        background-color: #fff;
+    border-bottom: 1px solid #0000;
+    content: "";
+    display: block;
+    height: 48px;
+    left: 0;
+    margin: 0 auto;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: none;
+    width: 100%;
+    z-index: 1;
     }
 }
+
+
+

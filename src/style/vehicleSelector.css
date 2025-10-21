@@ -1,0 +1,189 @@
+@media screen and (min-width: 1025px) {
+    .vehicle-selector {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background-color: #fff;
+        padding: 0;
+        text-align: left;
+        height: 60px;
+        border-bottom: 1px solid #dedede;
+        transition-delay: 0.2s;
+        transform: translateY(0);
+        color: #00324f;
+    }
+    
+    .vehicle-selector li {
+        display: inline-block !important;
+        padding: 0 20px;
+        line-height: 60px;
+        position: relative;
+        border-bottom: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .vehicle-selector li:first-child {
+        padding-left: 40px;
+    }
+    
+    .vehicle-selector li .btn-container {
+        height: 60px;
+        box-sizing: border-box;
+    }
+
+    .vehicle-selector li .btn-container .vehicle-btn {
+        height: 18px;
+        padding: 0;
+        position: relative;
+        background-image: none;
+        color: inherit;
+        font-weight: 600;
+    }
+
+    .vehicle-selector li .btn-container .vehicle-btn.active {
+        color: #0074b3;
+        width: 100%;
+    }
+
+    .vehicle-selector li .btn-container .vehicle-btn.active:before {
+        content: "";
+        position: absolute;
+        height: 2.5px;
+        width: 100%;
+        background-color: #0074b3;
+        bottom: -20.5px;
+    }
+
+    .vehicle-selector li.is-additional {
+        position: absolute;
+        right: 0;
+        display: inline-block;
+        padding: 0 20px;
+        height: 60px;
+        line-height: 60px;
+        border-bottom: 0;
+        margin: 0;
+    }
+
+    .vehicle-selector li.is-additional a {
+        padding: 0;
+        position: relative;
+        color: #0074b3;
+        font-size: 12px;
+        font-weight: 800;
+        text-decoration: none;
+        display: flex;
+    }
+
+    .vehicle-selector li.is-additional a:hover {
+        text-decoration: underline;
+    }
+
+    .vehicle-selector li.is-additional a img {
+        margin-right: 5px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .vehicle-selector {
+        display: flex;
+        flex-direction: column;
+        padding: 0 24px;
+    }
+
+    .vehicle-selector-container .back-button {
+        display: block;
+        background-color: #fff;
+        border-bottom: 0;
+        margin: 0;
+        padding: 0 15px;
+        position: relative;
+    }
+
+    .vehicle-selector-container .back-button div {
+        display: flex;
+        justify-content: space-between;
+        padding: 14px 0;
+    }
+
+    .vehicle-selector-container .back-button div .arrowIcon {
+        width: 15px;
+        padding: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .vehicle-selector-container .back-button div span {
+        color: #0074b3;
+        font-size: 14px;
+        letter-spacing: 0.58px;
+        text-transform: uppercase;
+        font-weight: 800;
+    }
+
+    .vehicle-selector li.is-additional {
+        right: 0;
+        height: 60px;
+        line-height: 60px;
+        border-bottom: 0;
+        margin: 0;
+    }
+
+    .vehicle-selector li.is-additional a {
+        padding: 0;
+        position: relative;
+        font-size: 0.875rem;
+        font-weight: 600;
+        text-decoration: none;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+
+    .vehicle-selector li {
+        padding: 0;
+        border-bottom: 1px solid #c4c4c4 !important;
+        list-style: none;
+        pointer-events: auto;
+        box-sizing: border-box;
+        display: list-item !important;
+    }
+
+    .vehicle-selector li .btn-container .vehicle-btn {
+        padding: 14px 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1025px) {
+    .btn-container::before {
+        content: "";
+        position: absolute;
+        width: 1.5px;
+        height: 18px;
+        background-color: #dedede;
+        right: 0;
+        top: 50%;
+        margin-top: -9px;
+    }
+
+    .btn-container.last-real::before {
+        content: none;
+    }
+
+    .vehicle-selector-container .back-button {
+        display: none;
+    }
+
+    .vehicle-category {
+        display: block;
+    }
+
+    .arrowRight {
+        display: none;
+    }
+}

@@ -1,0 +1,85 @@
+.vehicles-container {
+    box-sizing: border-box;
+    scroll-margin-top: 76px;
+}
+
+.vehicles-grid {
+    margin-top: 0;
+    padding-top: 0;
+    margin: auto;
+    overflow: visible;
+    padding-top: 30px;
+    width: calc(100vw - 1.875rem);
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 34.375em) {
+    .vehicles-grid {
+        width: calc(100% - 3.125rem);
+    }
+}
+
+@media screen and (min-width: 48em) {
+    .vehicles-grid {
+        width: calc(100% - .9375rem);
+        padding-top: 0;
+    }
+}
+
+@media screen and (min-width: 64em) {
+    .vehicles-grid {
+        width: calc(100% - 3.375rem);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .vehicles-grid {
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .arrowIcon {
+        display: none;
+    }
+}
+
+.cards-header {
+    display: block;
+    padding: 16px 0 10px;
+    text-align: left;
+    margin: 0 4%;
+    box-sizing: border-box;
+    color: #00324f;
+    font-size: 14px;
+}
+
+@media screen and (min-width: 34.375em) {
+    .cards-header {
+        margin: 0 6%;
+    }
+}
+
+@media screen and (min-width: 48em) {
+    .cards-header {
+        margin: 0 3vw;
+    }
+}
+
+@media screen and (min-width: 64em) {
+    .cards-header {
+        margin: 0 4vw;
+    }
+}
+
+@media screen and (min-width: 75em) {
+    .cards-header {
+        margin: 0 3.5vw;
+    }
+}
+

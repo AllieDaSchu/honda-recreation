@@ -1,3 +1,5 @@
+/* Main Container */
+
 .full-slider {
     margin: 0 auto;
     max-width: 1920px;
@@ -5,6 +7,8 @@
     position: relative;
     width: 100%;
 }
+
+/* Header */
 
 .full-slider .slider-header {
     padding: 0 20px;
@@ -27,11 +31,7 @@
     }
 }
 
-@media (min-width: 768px) and (hover:none) {
-    .full-slider ul {
-        scrollbar-color: #232323 #0000;
-    }
-}
+/* Container ul */
 
 .full-slider ul {
     box-sizing: content-box;
@@ -47,13 +47,20 @@
     scrollbar-width: thin;
     overflow-x: hidden;
     padding-inline-start: 0;
-    scrollbar-color: rgba(0,0,0,0.4) transparent;
 }
 
 .full-slider:hover ul {
     overflow-x: scroll;
     scrollbar-color: #232323 #0000;
 }
+
+@media (min-width: 768px) and (hover:none) {
+    .full-slider ul {
+        scrollbar-color: #232323 #0000;
+    }
+}
+
+/* Individual Slider Cards li */
 
 .full-slider ul li {
     flex-grow: 0;
@@ -77,9 +84,6 @@
 }
 
 @media screen and (min-width: 768px) {
-    .full-slider ul li:first-of-type {
-        margin-left: 0;
-    }
     .full-slider ul li {
         height: calc(44.792vw * 0.5625);
         margin-left: -32px;
@@ -88,15 +92,16 @@
         padding-right: 16px;
     }
 
+    .full-slider ul li:first-of-type {
+        margin-left: 0;
+    }
+
     .full-slider ul li:last-of-type {
         padding-right: 32px;
     }
 }
 
 @media screen and (min-width: 1025px) {
-    .full-slider ul li:last-of-type {
-        padding-right: 56px;
-    }
     .full-slider ul li {
         height: calc(calc(25vw - 46px) * .5625);
         margin-left: -56px;
@@ -104,7 +109,12 @@
         padding-left: 56px;
         padding-right: 24px;
     }
+    .full-slider ul li:last-of-type {
+        padding-right: 56px;
+    }
 }
+
+/* Slider Controls */
 
 .slider-controls {
     opacity: 0;
@@ -116,9 +126,6 @@
     position: absolute;
     top: 50%;
     z-index: 10;
-}
-
-.slider-btn {
     background-color: #000;
     color: #fff;
     border-radius: 50%;
@@ -128,14 +135,21 @@
     transition: transform 0.2s;
     width: 35px;
     height: 35px;
+    margin: 0 1px 0 10px;
+    border: 0;
+    cursor: pointer;
+    opacity: inherit;
+    outline: 0 none;
+    text-shadow: none;
 }
 
 .slider-controls .left {
-        left: 10px;
-    }
-    .slider-controls .right {
-        right: 10px;
-    }
+    left: 10px;
+}
+
+.slider-controls .right {
+    right: 10px;
+}
 
 @media screen and (min-width: 768px) {
     .slider-controls .left {

@@ -1,0 +1,166 @@
+.vehicle-dropdown {
+    position: fixed;
+    top: 76px;
+    left: 0;
+    width: 100%;
+    background-color: #f6f6f6;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    overflow: hidden;
+    height: 0;
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;;
+    z-index: 50;
+    padding-bottom: 15vh;
+    box-sizing: border-box;
+}
+
+.vehicle-dropdown.open {
+    min-height: calc(100vh - 76.8px);
+    height: auto;
+    opacity: 1;
+    transform: translateY(0);
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.vehicle-container {
+    scroll-margin-top: 60.8px;
+}
+
+.spacer {
+    box-sizing: border-box;
+    height: 20px
+}
+
+.cards-header {
+    display: block;
+    padding: 16px 0 10px;
+    text-align: left;
+    margin: 0 4%;
+    box-sizing: border-box;
+    color: #00324f;
+    font-size: 14px;
+}
+
+@media screen and (min-width: 34.375em) {
+    .cards-header {
+        margin: 0 6%;
+    }
+}
+
+@media screen and (min-width: 48em) {
+    .cards-header {
+        margin: 0 3vw;
+    }
+}
+
+@media screen and (min-width: 64em) {
+    .cards-header {
+        margin: 0 4vw;
+    }
+}
+
+@media screen and (min-width: 75em) {
+    .cards-header {
+        margin: 0 3.5vw;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .vehicle-dropdown.open {
+        display: block;
+        z-index: 1;
+        transform: translateX(0);
+        top: 0;
+        transition: transform .5s;
+        background-color: #eee;
+        bottom: 0;
+        left: 0;
+        overflow-y: auto;
+        position: fixed;
+        right: 0;
+        box-sizing: border-box;
+    }
+
+    .vehicle-container {
+        display: none;
+    }
+
+    .vehicle-container.selected {
+        display: block;
+        position: absolute;
+        top: 0;
+        background-color: #F6F6F6;
+        min-height: calc(100vh - 76.8px);
+        z-index: 200;
+    }
+
+    .vehicle-container.future.selected {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .vehicle-selector-container {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .back-button {
+        display: block;
+        background-color: #fff;
+        border-bottom: 0;
+        margin: 0;
+        padding: 0 15px;
+        position: relative;
+    }
+
+    .back-button.cars-header {
+        z-index: 500;
+    }
+
+    .back-button div {
+        display: flex;
+        justify-content: space-between;
+        padding: 14px 0;
+    }
+
+    .back-button div .arrowIcon {
+        width: 15px;
+        padding: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .back-button div .cards-header {
+        color: #0074b3;
+        font-size: 14px;
+        letter-spacing: 0.58px;
+        text-transform: uppercase;
+        font-weight: 800;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .small-header {
+        padding: 16px 0 10px;
+        text-align: left;
+        box-sizing: border-box;
+        margin: 0 3vw;
+    }
+
+    .small-header h3 {
+        font-size: 14px;
+        margin: 0;
+        font-weight: 600;
+        line-height: 1rem;
+        color: #00324f;
+    }
+}

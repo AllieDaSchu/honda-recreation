@@ -1,3 +1,14 @@
+/* Card Container and Wrapper */
+
+.thin-card {
+    box-sizing: content-box;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+    scroll-snap-align: start;
+}
+
 .thin-card .card-wrapper {
     position: relative;
     height: inherit;
@@ -11,12 +22,15 @@
     color: white;
 }
 
+/* Card Background Image */
+
 .thin-card-img,
 .thin-card-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.4s ease;
 }
 
 .card-wrapper .thin-card-img {
@@ -27,17 +41,11 @@
   height: 100%;
 }
 
-.card-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
-}
-
 .card-wrapper:hover img {
   transform: scale(1.05);
 }
+
+/* Card Content */
 
 .card-content {
   position: relative;
@@ -49,34 +57,35 @@
   justify-content: space-between;
 }
 
-.card-wrapper .card-head, .card-wrapper .card-foot {
+.card-content .card-head, .card-content .card-foot {
     padding-bottom: 0;
     padding: 20px;
     position: relative;
     z-index: 1;
 }
 
-.card-wrapper .card-foot {
+.card-content .headline, .card-content .subheadline {
+    color: #fff;
+    line-height: 1.35;
+    position: relative;
+    z-index: 2;
+}
+.card-content .subheadline {
+    font-size: 0.875rem;
+}
+.card-content .headline {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.card-content .card-foot {
     display: flex;
     align-items: flex-end;
     min-height: 53px;
     padding-top: 0;
 }
 
-.card-wrapper .subheadline {
-    font-size: 0.875rem;
-}
-
-.card-wrapper .headline {
-    font-size: 1.25rem;
-    font-weight: 500;
-}
-
-.card-wrapper .headline, .card-wrapper .subheadline {
-    color: #fff;
-    font-family: "AvenirNextRegular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.35;
-    position: relative;
+.card-cta {
     z-index: 2;
 }
 
@@ -84,22 +93,10 @@
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    font-family: "AvenirNextRegular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 0.75rem;
 }
 
-.card-cta {
-    z-index: 2;
-}
-
-.thin-card {
-    box-sizing: content-box;
-    display: block;
-    height: 100%;
-    overflow: hidden;
-    padding: 0;
-    scroll-snap-align: start;
-}
+/* Card Gradients */
 
 .gradient.top {
     background: linear-gradient(180deg, #000 5%, #0000);

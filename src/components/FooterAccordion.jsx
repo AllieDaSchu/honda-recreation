@@ -1,7 +1,8 @@
 import {useState} from 'react'
 import '../style/footer.css'
+import {memo} from "react"
 
-const FooterAccordion = ({title, children}) => {
+const FooterAccordion = memo(({title, children}) => {
     const [open, setOpen] = useState(false);
 
     return (
@@ -15,6 +16,6 @@ const FooterAccordion = ({title, children}) => {
             </div>
         </div>
     )
-}
+})
 
 export default FooterAccordion;

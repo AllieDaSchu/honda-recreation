@@ -1,3 +1,5 @@
+/* Main Container */
+
 .shopping-tools-container {
     padding: 0 20px;
 }
@@ -14,6 +16,19 @@
     }
 }
 
+/* Headline */
+
+.shopping-title {
+    color: #232323;
+    font-family: AvenirNextDemi, HelveticaNeue, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Tools Container */
+
 .tools-container {
     display: grid;
     gap: 8px;
@@ -27,6 +42,14 @@
     }
 }
 
+@media screen and (min-width: 1025px) {
+    .shopping-tools-container {
+        padding: 0 56px;
+    }
+}
+
+/* Individual Btns */
+
 .tool-btn {
     align-items: center;
     background: #f6f6f6;
@@ -34,14 +57,13 @@
     display: flex;
     flex-flow: column nowrap;
     height: 164px;
-    justify-content: flex-end;
+    justify-content: center;
     padding: 30px 12px;
     text-decoration: none;
 }
 
 .tool-headline {
     color: #232323;
-    font-family: AvenirNextDemi, HelveticaNeue, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 0.875rem;
     line-height: 1rem;
     text-align: center;
@@ -50,39 +72,16 @@
 .tool-icon {
     align-items: center;
     display: flex;
-    height: 70px;
     justify-content: center;
-    margin-bottom: 10px;
-    transition: all ease-in-out 0.2s;
-    width: 70px;
-}
-
-@media screen and (min-width: 1025px) {
-    .tool-icon {
-        height: 90px;
-        width: 90px;
-    }
-}
-
-@media screen and (min-width: 1025px) {
-    .shopping-tools-container {
-        padding: 0 56px;
-    }
-}
-
-.shopping-title {
-    color: #232323;
-    font-family: AvenirNextDemi, HelveticaNeue, Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 1.5rem;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    text-align: left;
+    transition: all ease-in-out 0.2s, transform 0.2s;
+    height: 90px;
+    width: 90px;
 }
 
 .tool-btn:hover .tool-icon {
     transform: scale(1.1);
 }
 
-.tool-btn .tool-icon {
-    transition: transform 0.2s;
+.tool-icon img {
+    height: 90px;
 }

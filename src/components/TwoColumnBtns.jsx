@@ -4,23 +4,12 @@ import col1ImgS from "../assets/col1ImgS.png"
 import col2ImgL from "../assets/col2ImgL.png"
 import col2ImgS from "../assets/col2ImgS.png"
 
-const images = [
-    {
-        large: col1ImgL,
-        small: col1ImgS
-    },
-    {
-        large: col2ImgL,
-        small: col2ImgS
-    }
-]
-
 const TwoColumnBtns = () => {
     return (
         <div className="two-cols-container">
             <div className="col">
                 <div className="col-card">
-                        <picture class="col-img">
+                        <picture className="col-img">
                             <source media="(min-width: 1025px)" srcSet={col1ImgL} />
                             <source media="(min-width: 768px)" srcSet={col1ImgS} />
                             <img srcSet={col1ImgS} />
@@ -28,7 +17,7 @@ const TwoColumnBtns = () => {
                         
                         <div className="col-content">
                             <div className="col-head">
-                                <div class="gradient top"></div>
+                                <div className="gradient top"></div>
                                 <div className="subheadline">
                                     HondaTrue
                                 </div>
@@ -37,8 +26,8 @@ const TwoColumnBtns = () => {
                                 </div>
                             </div>
                             <div className="col-foot">
-                                <div class="gradient bottom"></div>
-                                <div class="col-cta">
+                                <div className="gradient bottom"></div>
+                                <div className="col-cta">
                                     <a href="">SHOP CERTIFIED</a>
                                 </div>
                             </div>
@@ -47,14 +36,14 @@ const TwoColumnBtns = () => {
             </div>
             <div className="col">
                 <div className="col-card">
-                        <picture class="col-img">
+                        <picture className="col-img">
                             <source media="(min-width: 1025px)" srcSet={col2ImgL} />
                             <source media="(min-width: 768px)" srcSet={col2ImgS} />
                             <img srcSet={col2ImgS} />
                         </picture>
                         <div className="col-content">
                             <div className="col-head">
-                                <div class="gradient top"></div>
+                                <div className="gradient top"></div>
                                 <div className="subheadline">
                                     MyGarage for Owners
                                 </div>
@@ -63,8 +52,8 @@ const TwoColumnBtns = () => {
                                 </div>
                             </div>
                             <div className="col-foot">
-                                <div class="gradient bottom"></div>
-                                <div class="col-cta">
+                                <div className="gradient bottom"></div>
+                                <div className="col-cta">
                                     <a href="">LEARN MORE</a>
                                 </div>
                             </div>

@@ -1,11 +1,11 @@
-import {useState} from 'react'
 import ThinCard from './ThinCard.jsx'
 import '../style/slider.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faChevronLeft} from '@fortawesome/free-solid-svg-icons';
 import {faChevronRight} from '@fortawesome/free-solid-svg-icons';
+import {memo} from "react"
 
-const Slider = ({ header, cards }) => {
+const Slider = memo(({ header, cards }) => {
     return (
         <div className="full-slider">
             <h3 className="slider-header">{header}</h3>
@@ -23,6 +23,6 @@ const Slider = ({ header, cards }) => {
         </div>
         
     )
-}
+})
 
 export default Slider;

@@ -1,3 +1,5 @@
+/* Footer Before (Blue Line) */
+
 .footer::before {
     background-color: rgb(0, 116, 179);
     content: "";
@@ -15,6 +17,8 @@
     }
 }
 
+/* Footer Logo (Blue Honda Logo) */
+
 .footer-logo {
     text-align: center;
     padding: 20px 0 20px 0;
@@ -25,36 +29,7 @@
     width: 92px;
 }
 
-.stayInformed {
-    text-align: center;
-}
-
-.footer .stayInformed {
-    display: none;
-}
-
-@media screen and (min-width: 768px) {
-    .footer .stayInformed {
-        display: block;
-        text-align: right;
-        flex-basis: 50%;
-    }
-}
-
-@media screen and (min-width: 1025px) {
-    .footer .stayInformed {
-        font-size: 0.875rem;
-        flex-basis: 35%;
-    }
-}
-
-.stayInformed p, .contact .socials {
-    color: rgb(0, 50, 79);
-    font-family: AvenirNextDemi, HelveticaNeue, Helvetica Neue, Helvetica, Arial, sans-serif;
-    line-height: 1.125rem;
-    font-size: 0.875rem;
-    font-weight: bold;
-}
+/*Contact Section */
 
 .footer .contact {
     display: flex;
@@ -86,6 +61,37 @@
         left: 25px;
         right: 25px;
         top: 0;
+    }
+}
+
+
+.stayInformed p, .contact .socials {
+    color: rgb(0, 50, 79);
+    line-height: 1.125rem;
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+.stayInformed {
+    text-align: center;
+}
+
+.footer .stayInformed {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .footer .stayInformed {
+        display: block;
+        text-align: right;
+        flex-basis: 50%;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .footer .stayInformed {
+        font-size: 0.875rem;
+        flex-basis: 35%;
     }
 }
 
@@ -190,6 +196,8 @@
     color: #fff;
 }
 
+/* Footer Links Columns */
+
 .footer .links {
     display: flex;
     flex-basis: 0px;
@@ -222,10 +230,6 @@
     }
 }
 
-.footer ul {
-    padding-inline-start: 0;
-}
-
 .footer .links .link {
     -webkit-box-flex: 0;
     flex: 0 0 20%;
@@ -247,18 +251,19 @@
     font-weight: bold;
 }
 
+/* Footer List CSS */
+
 .footer .links ul li a {
-    color: rgb(0, 68, 107);
+    color: #00446b;
     display: inline-block;
-    font-size: 0.75rem;
+    font-size: .75rem;
     line-height: 1rem;
-    margin: 10px 0px 0;
+    margin: 10px 0 0 15px;
     transition: 0.3s;
     white-space: normal;
     z-index: 100;
+    font-weight: 500;
     text-decoration: none;
-    padding-inline-start: 0;
-    font-weight: 550;
 }
 
 @media (min-width: 1025px) {
@@ -267,10 +272,18 @@
     }
 }
 
-.footer-links {
-  display: flex;
-  justify-content: space-between;
+.footer ul {
+    padding: 0 25px;
+    margin: 0 0 16px 0;
 }
+
+@media screen and (min-width: 1025px) {
+    .footer ul {
+        padding-inline-start: 0;
+    }
+}
+
+/* Accordion Information */
 
 .accordion-header {
   display: none;

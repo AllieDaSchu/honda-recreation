@@ -1,23 +1,21 @@
-.pic-slider {
+/* Slider Container and Pic-Slider */
+
+.slider-container {
+    position: relative;
+    height: 484px;
     width: 100%;
-    max-height: 484px;
+    z-index: 0;
 }
 
 .pic-slider {
+    width: 100%;
+    max-height: 484px;
     height: 100%;
     left: 0;
     max-height: 484px;
     position: absolute;
     top: 0;
     width: 100%;
-}
-
-.slider-container {
-    font-family: "AvenirNextRegular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    position: relative;
-    height: 484px;
-    width: 100%;
-    z-index: 0;
 }
 
 @media (min-width: 768px) {
@@ -38,6 +36,8 @@
     }
 }
 
+/* Image Sizing */
+
 .slider-container .pic-slider img {
     height: 100%;
     object-fit: cover;
@@ -46,6 +46,8 @@
     top: 0;
     width: 100%;
 }
+
+/* Main Content Section */
 
 .hero-content {
     align-items: flex-start;
@@ -58,6 +60,14 @@
     z-index: 1;
     box-sizing: border-box;
 }
+
+@media (min-width: 1025px) {
+    .hero-content {
+        padding-bottom: 50px;
+    }
+}
+
+/* Vehicle Information */
 
 .hero-content .hero-vehicle-info {
     box-sizing: border-box;
@@ -78,44 +88,42 @@
     }
 }
 
+.hero-vehicle-info h2 {
+    font-size: 1rem;
+    line-height: normal;
+    margin-bottom: 14px;
+    max-width: 335px;
+}
+
+.hero-vehicle-info p {
+    font-size: 1.6875rem;
+    line-height: 1.9375rem;
+    margin-bottom: 14px;
+    max-width: 335px;
+}
+
+/* Action Buttons */
+
 .hero-actions {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.hero-actions .action-buttons {
-    display: flex;
-    gap: 12px;
+.hero-actions .action-btns {
+    display: inline-grid;
+    grid-auto-flow: row;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, minmax(max-content, 1fr));
 }
 
-.hero-actions .desktop-controls {
-    display: flex;
-    gap: 10px;
-}
-
-.ui-control {
-  font-size: 0.875rem;
-  background-color: #000;
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  margin: 0 1px;
-  transition: transform .2s;
-}
-
-.ui-control:hover {
-  background-color: #fff;
-  color: #0077c0;
-  transform: scale(1.2);
-}
+/* Hero Button Style */
 
 .hero-btn {
     background-color: #0077c0;
     border-radius: 33px;
     color: #fff;
     display: inline-block;
-    font-family: AvenirNextBold, HelveticaNeue, Helvetica Neue, Helveica, Arial, sans-serif;
     font-size: 0.875;
     line-height: normal;
     padding: 10px 20px 9px;
@@ -130,29 +138,26 @@
     color: #000;
 }
 
-.hero-actions .action-btns {
-    display: inline-grid;
-    grid-auto-flow: row;
-    grid-gap: 10px;
-    grid-template-columns: repeat(2, minmax(max-content, 1fr));
+/* Control Button Style */
+
+.ui-control {
+    font-size: 0.875rem;
+    background-color: #000;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    margin: 0 1px 0 10px;
+    transition: transform .2s;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    opacity: inherit;
+    outline: 0 none;
+    text-shadow: none;
 }
 
-@media (min-width: 1025px) {
-    .hero-content {
-        padding-bottom: 50px;
-    }
-}
-
-.hero-vehicle-info h2 {
-    font-size: 1rem;
-    line-height: normal;
-    margin-bottom: 14px;
-    max-width: 335px;
-}
-
-.hero-vehicle-info p {
-    font-size: 1.6875rem;
-    line-height: 1.9375rem;
-    margin-bottom: 14px;
-    max-width: 335px;
+.ui-control:hover {
+  background-color: #fff;
+  color: #0077c0;
+  transform: scale(1.2);
 }

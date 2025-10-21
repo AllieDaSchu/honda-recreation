@@ -1,0 +1,214 @@
+.vehicle-card {
+    height: auto;
+    margin: 1%;
+    background-color: #fff;
+    border-radius: 4px;
+    width: 18%;
+    clear: left;
+    padding: 0;
+    box-shadow: none;
+    display: inline-block;
+    vertical-align: top;
+    overflow: visible;
+    position: relative;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 1025px) {
+    .vehicle-card {
+        width: 31%;
+    }
+}
+
+.vehicle-card .primary-ctas a {
+    width: 46%;
+    padding: 0.375rem;
+    /* font-family: AvenirNextDemi; */
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: #fff;
+    color: #0074b3;
+    display: block;
+    max-width: none;
+    border-radius: 1.21875rem;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    border: 2px solid #0074b3;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .vehicle-card {
+        width: 46%;
+    }
+
+    .vehicle-card .primary-ctas {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .vehicle-card .primary-ctas a {
+        width: 100%;
+    }
+}
+
+.vehicle-card .subtitle {
+    left: 12px;
+    top: 14px;
+    /* font-family: AvenirNextDemi; */
+    height: 25px;
+    position: absolute;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 0.625rem;
+    font-weight: 600;
+    color: #00324f;
+    padding: 0.2em 0.6em 0.3em;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25em;
+    letter-spacing: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.vehicle-card .image {
+    min-height: 7.5vw;
+    margin-top: 10px;
+}
+
+.vehicle-card .image img {
+    padding-top: 0;
+    text-indent: -9999px;
+    display: block;
+    width: 100%;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.vehicle-card .title {
+    width: 85%;
+    padding-bottom: 5px;
+    display: block;
+    /* font-family: AvenirNextBold; */
+    font-size: 14px;
+    letter-spacing: normal;
+    text-align: left;
+    border-bottom: 1.3px solid #e8e8e8;
+    white-space: nowrap;
+    margin: 0 auto 5px;
+    box-sizing: border-box;
+    color: #00324f;
+}
+
+.vehicle-card .vehicle-info {
+    width: 86%;
+    display: block;
+    padding-top: 3px;
+    white-space: nowrap;
+    margin: 0 auto;
+    box-sizing: border-box;
+    color: #00324f;
+}
+
+.vehicle-card .vehicle-info div {
+    display: flex;
+    float: none;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    color: #00324f;
+}
+
+.vehicle-card .vehicle-info div span {
+    /* font-family: AvenirNextDemi; */
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-flex;
+    line-height: 1.125rem;
+    letter-spacing: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #00324f;
+}
+
+.vehicle-card .vehicle-info div p {
+    font-size: 10px;
+    font-weight: 400;
+    text-align: justify;
+    display: inline-flex;
+    width: 100%;
+    margin: 0 auto;
+    margin-left: 4px;
+    color: #00324f;
+    line-height: 1.125rem;
+    letter-spacing: 0;
+    box-sizing: border-box;
+}
+
+.vehicle-card .primary-ctas {
+    padding: 5px 7.2% 9px;
+    padding-top: 16px;
+    display: inline-flex;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+
+
+.vehicle-card .primary-ctas a:hover {
+    background-color: #0074b3;
+    color: #fff;
+}
+
+.vehicle-card .primary-ctas a:first-child {
+    float: left;
+    margin-bottom: 10px;
+}
+
+.vehicle-card .primary-ctas a:last-child {
+    float: right;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+    .back-button {
+        display: block;
+        background-color: #fff;
+        border-bottom: 0;
+        margin: 0;
+        padding: 0 15px;
+        position: relative;
+    }
+
+    .back-button div {
+        display: flex;
+        justify-content: space-between;
+        padding: 14px 0;
+    }
+
+    .back-button div .arrowIcon {
+        width: 15px;
+        padding: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .back-button div .cards-header {
+        color: #0074b3;
+        font-size: 14px;
+        letter-spacing: 0.58px;
+        text-transform: uppercase;
+        font-weight: 800;
+        padding: 0;
+    }
+}

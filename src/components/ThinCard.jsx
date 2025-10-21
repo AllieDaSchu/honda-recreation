@@ -1,13 +1,14 @@
 import '../style/thinCard.css'
+import {memo} from "react"
 
-const ThinCard = ({title, subtext, subtextLink, img}) => {
+const ThinCard = memo(({title, subtext, subtextLink, img}) => {
     return (
         <div className="thin-card">
             <div className="card-wrapper">
                 <img className="thin-card-img" src={img} />
                 <div className="card-content">
                     <div className="card-head">
-                        <div class="gradient top"></div>
+                        <div className="gradient top"></div>
                         <div className="subheadline">
                         </div>
                         <div className="headline">
@@ -15,8 +16,8 @@ const ThinCard = ({title, subtext, subtextLink, img}) => {
                         </div>
                     </div>
                     <div className="card-foot">
-                        <div class="gradient bottom"></div>
-                        <div class="card-cta">
+                        <div className="gradient bottom"></div>
+                        <div className="card-cta">
                             <a href={subtextLink}>{subtext}</a>
                         </div>
                     </div>
@@ -26,6 +27,6 @@ const ThinCard = ({title, subtext, subtextLink, img}) => {
             
         </div>
     )
-}
+})
 
 export default ThinCard;
